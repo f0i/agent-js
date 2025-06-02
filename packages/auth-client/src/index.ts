@@ -376,6 +376,13 @@ export class AuthClient {
     }
   }
 
+  public async handleSuccess(
+    message: InternetIdentityAuthResponseSuccess,
+    onSuccess?: OnSuccessFunc,
+  ): Promise<void> {
+    await this._handleSuccess(message, onSuccess);
+  }
+
   private async _handleSuccess(
     message: InternetIdentityAuthResponseSuccess,
     onSuccess?: OnSuccessFunc,
